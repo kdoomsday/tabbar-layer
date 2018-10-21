@@ -100,5 +100,6 @@ That is, a string used to represent it on the tab bar."
               (t "user"))))
 (setq tabbar-buffer-groups-function 'my-tabbar-buffer-groups)
 
-(global-set-key [C-left] 'tabbar-backward-tab)
-(global-set-key [C-right] 'tabbar-forward-tab)
+(global-set-key (kbd "C-{") 'tabbar-backward-tab)
+(global-set-key (kbd "C-}") 'tabbar-forward-tab)
+(global-set-key (kbd "<f6>") 'tabbar-mode)
