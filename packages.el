@@ -96,6 +96,7 @@ That is, a string used to represent it on the tab bar."
  tabbar.el v1.7."
   (list (cond ((string-equal "*" (substring (buffer-name) 0 1)) "emacs")
               ((string-equal "*" (substring (buffer-name) 1 2)) "emacs")
+              ((string-prefix-p "magit" (buffer-name)) "magit")
               ((eq major-mode 'dired-mode) "emacs")
               (t "user"))))
 (setq tabbar-buffer-groups-function 'my-tabbar-buffer-groups)
